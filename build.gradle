@@ -1,0 +1,24 @@
+plugins { id 'com.android.application' version '8.5.2' }
+
+android {
+    namespace 'com.mini.home'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'com.mini.home'
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName '1.0'
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['.']
+            java.exclude 'build/**'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
